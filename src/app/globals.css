@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-dark: #0A0A0A;
+  --color-vermillion: #D4380D;
+  --color-gold: #C9A96E;
+  --color-cream: #F5F0EB;
+  --color-stone: #8C8579;
+  --color-offwhite: #E8E2DA;
+  --color-brown: #1A1714;
+
+  --background: var(--color-dark);
+  --foreground: var(--color-offwhite);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dark: var(--color-dark);
+  --color-vermillion: var(--color-vermillion);
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+  --color-stone: var(--color-stone);
+  --color-offwhite: var(--color-offwhite);
+  --color-brown: var(--color-brown);
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
